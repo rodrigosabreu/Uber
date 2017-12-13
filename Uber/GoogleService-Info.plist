@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>203861655539-10v4q9ag6i6v36sveaojlr259tt1afcp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.203861655539-10v4q9ag6i6v36sveaojlr259tt1afcp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBgycw1c1GnddJ52bBcKoNLDqFIpcGfprE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>203861655539</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.net.tleste.UberClone-110484</string>
+	<key>PROJECT_ID</key>
+	<string>uber-be65c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>uber-be65c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:203861655539:ios:daf0be961a6bb0dd</string>
+	<key>DATABASE_URL</key>
+	<string>https://uber-be65c.firebaseio.com</string>
+</dict>
+</plist>
