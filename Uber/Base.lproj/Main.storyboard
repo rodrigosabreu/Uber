@@ -140,7 +140,7 @@
                                 <rect key="frame" x="16" y="259" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome completo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="by7-RL-ceg">
                                 <rect key="frame" x="16" y="155" width="107" height="21"/>
@@ -182,6 +182,9 @@
                                 <state key="normal" title="Cadastre-se">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cadastrarUsuario:" destination="ObN-KF-sda" eventType="touchUpInside" id="weN-EI-gbr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motorista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGd-Ii-I5X">
                                 <rect key="frame" x="74" y="310" width="73" height="21"/>
@@ -219,6 +222,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eAN-ld-ZkQ"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="EjY-KM-m7Y" id="RtO-ZQ-BQn"/>
+                        <outlet property="nomeCompleto" destination="0Cs-ph-uYF" id="ro0-ne-Knx"/>
+                        <outlet property="senha" destination="BdY-cJ-Gre" id="dHM-eF-OK5"/>
+                        <outlet property="tipoUsuario" destination="Cen-qd-qSp" id="Ll2-P7-n1L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3r-VH-orQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
