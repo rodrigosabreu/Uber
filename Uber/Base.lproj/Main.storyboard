@@ -284,6 +284,9 @@
                                 <state key="normal" title="Entrar">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="entrar:" destination="pKN-GN-WlL" eventType="touchUpInside" id="uB8-2x-jyR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,6 +306,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iAM-rf-rQx"/>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="UM2-Zt-UhV" id="iy8-MB-BkH"/>
+                        <outlet property="senha" destination="6XQ-rb-XzJ" id="fM2-qc-K7l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwu-AE-bnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
