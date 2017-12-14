@@ -7,12 +7,31 @@
 //
 
 import UIKit
+import FirebaseAuth
+
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let autenticacao = Auth.auth()
+        
+        
+        
+        
+        
+        
+        autenticacao.addStateDidChangeListener { (autenticacao, usuario) in
+            
+            if let usuarioLogado = usuario{
+                
+                self.performSegue(withIdentifier: "segueLoginPrincipal", sender: nil)
+                
+            }
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

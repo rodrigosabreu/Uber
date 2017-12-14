@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0830CA2B2B8111959AE6216F /* Pods_Uber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4024F8F912F8C05049EB3369 /* Pods_Uber.framework */; };
+		620C461C1FE1A9770054B721 /* PassageiroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 620C461B1FE1A9770054B721 /* PassageiroViewController.swift */; };
 		623B9C281FDE9DFC00450C9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 623B9C271FDE9DFC00450C9B /* GoogleService-Info.plist */; };
 		624FB3FA1FE145B300DA1CE1 /* EntrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624FB3F91FE145B300DA1CE1 /* EntrarViewController.swift */; };
 		624FB3FC1FE145C600DA1CE1 /* CadastroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624FB3FB1FE145C600DA1CE1 /* CadastroViewController.swift */; };
@@ -22,6 +23,7 @@
 		14148FE2ABC32240094E0BF1 /* Pods-Uber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uber/Pods-Uber.debug.xcconfig"; sourceTree = "<group>"; };
 		1CDD0784A0D8D95B5D0D4340 /* Pods-Uber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uber.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uber/Pods-Uber.release.xcconfig"; sourceTree = "<group>"; };
 		4024F8F912F8C05049EB3369 /* Pods_Uber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		620C461B1FE1A9770054B721 /* PassageiroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassageiroViewController.swift; sourceTree = "<group>"; };
 		623B9C271FDE9DFC00450C9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		624FB3F91FE145B300DA1CE1 /* EntrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrarViewController.swift; sourceTree = "<group>"; };
 		624FB3FB1FE145C600DA1CE1 /* CadastroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadastroViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				62BA19051FDAB81A00A2FFF0 /* ViewController.swift */,
 				624FB3F91FE145B300DA1CE1 /* EntrarViewController.swift */,
 				624FB3FB1FE145C600DA1CE1 /* CadastroViewController.swift */,
+				620C461B1FE1A9770054B721 /* PassageiroViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				620C461C1FE1A9770054B721 /* PassageiroViewController.swift in Sources */,
 				62BA19061FDAB81A00A2FFF0 /* ViewController.swift in Sources */,
 				62BA19041FDAB81A00A2FFF0 /* AppDelegate.swift in Sources */,
 				624FB3FA1FE145B300DA1CE1 /* EntrarViewController.swift in Sources */,

@@ -33,7 +33,7 @@ class EntrarViewController: UIViewController {
                             //verificar se o usuario esta logado
                             if usuario != nil{
                                 
-                                print("Usuário foi autenticado com sucesso")
+                                self.performSegue(withIdentifier: "segueLogin", sender: nil)
                                 
                             }
                             

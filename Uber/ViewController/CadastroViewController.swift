@@ -30,7 +30,18 @@ class CadastroViewController: UIViewController {
                     autenticacao.createUser(withEmail: emailR, password: senhaR, completion: { (usuario, erro) in
                         
                         if erro == nil{
-                            print("Sucesso ao criar conta do usuário")
+                            
+                            //Valida se o usuario está logado
+                            if usuario != nil{
+                                
+                                self.performSegue(withIdentifier: "segueLoginCadastro", sender: nil)
+                                
+                            }else{
+                                
+                                print("Erro ao autenticar o suario")
+                                
+                            }
+                            
                         }else{
                             print("Erro ao criar conta do usuário, tente novamente.")
                         }

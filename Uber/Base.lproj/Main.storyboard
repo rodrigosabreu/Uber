@@ -101,6 +101,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Uber" id="Z1B-hn-WaW"/>
+                    <connections>
+                        <segue destination="YA6-2D-e58" kind="presentation" identifier="segueLoginPrincipal" id="n23-ha-rGn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -227,11 +230,80 @@
                         <outlet property="nomeCompleto" destination="0Cs-ph-uYF" id="ro0-ne-Knx"/>
                         <outlet property="senha" destination="BdY-cJ-Gre" id="dHM-eF-OK5"/>
                         <outlet property="tipoUsuario" destination="Cen-qd-qSp" id="Ll2-P7-n1L"/>
+                        <segue destination="YA6-2D-e58" kind="presentation" identifier="segueLoginCadastro" id="uSN-aG-qMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O3r-VH-orQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320.8" y="424.13793103448279"/>
+            <point key="canvasLocation" x="1321" y="546"/>
+        </scene>
+        <!--UBER-->
+        <scene sceneID="GF5-xn-80W">
+            <objects>
+                <viewController id="Zdk-Jc-U57" customClass="PassageiroViewController" customModule="Uber" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d00-4y-rxO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IOR-Zm-OPd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNz-ch-9bM">
+                                <rect key="frame" x="0.0" y="602" width="375" height="65"/>
+                                <color key="backgroundColor" red="0.1717562675" green="0.64351600409999998" blue="0.68763011689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="lK5-nm-YFW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Chamar Uber">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="entrar:" destination="pKN-GN-WlL" eventType="touchUpInside" id="kMM-3Y-HyJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fNz-ch-9bM" firstAttribute="leading" secondItem="16U-TC-jgS" secondAttribute="leading" id="0Je-C1-b2b"/>
+                            <constraint firstItem="IOR-Zm-OPd" firstAttribute="leading" secondItem="16U-TC-jgS" secondAttribute="leading" id="0t2-pQ-oQm"/>
+                            <constraint firstItem="fNz-ch-9bM" firstAttribute="trailing" secondItem="16U-TC-jgS" secondAttribute="trailing" id="Ico-W3-mlI"/>
+                            <constraint firstItem="fNz-ch-9bM" firstAttribute="bottom" secondItem="16U-TC-jgS" secondAttribute="bottom" id="bVn-uV-2Ob"/>
+                            <constraint firstItem="IOR-Zm-OPd" firstAttribute="top" secondItem="16U-TC-jgS" secondAttribute="top" id="djw-UB-RXi"/>
+                            <constraint firstItem="IOR-Zm-OPd" firstAttribute="trailing" secondItem="16U-TC-jgS" secondAttribute="trailing" id="fFL-2I-1b8"/>
+                            <constraint firstItem="IOR-Zm-OPd" firstAttribute="bottom" secondItem="16U-TC-jgS" secondAttribute="bottom" id="hub-rB-2ah"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="16U-TC-jgS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="UBER" id="eW0-mz-pld">
+                        <barButtonItem key="leftBarButtonItem" title="Deslogar" id="krf-OB-irx">
+                            <connections>
+                                <action selector="deslogarUsuario:" destination="Zdk-Jc-U57" id="Skq-fn-FP8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapa" destination="IOR-Zm-OPd" id="WZW-HD-aAJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJf-nf-3a7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrp-gT-Qr1">
+                    <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                    <color key="backgroundColor" red="0.1717562675" green="0.64351600409999998" blue="0.68763011689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="6MD-iI-Ags"/>
+                        <constraint firstAttribute="width" constant="200" id="810-ti-NKi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="Entrar">
+                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="entrar:" destination="pKN-GN-WlL" eventType="touchUpInside" id="cJG-Et-Dxt"/>
+                    </connections>
+                </button>
+            </objects>
+            <point key="canvasLocation" x="2972" y="115.59220389805098"/>
         </scene>
         <!--Entrar View Controller-->
         <scene sceneID="ieT-aZ-aXU">
@@ -309,11 +381,12 @@
                     <connections>
                         <outlet property="email" destination="UM2-Zt-UhV" id="iy8-MB-BkH"/>
                         <outlet property="senha" destination="6XQ-rb-XzJ" id="fM2-qc-K7l"/>
+                        <segue destination="YA6-2D-e58" kind="presentation" identifier="segueLogin" id="5Rr-NO-hK9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iwu-AE-bnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1320.8" y="-258.62068965517244"/>
+            <point key="canvasLocation" x="1321" y="-287"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tJ9-Oh-TU9">
@@ -333,9 +406,30 @@
             </objects>
             <point key="canvasLocation" x="-268" y="116"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ikW-Me-TlP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YA6-2D-e58" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jtM-Vw-wDz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zdk-Jc-U57" kind="relationship" relationship="rootViewController" id="L1k-Ag-uLV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lv7-3W-Tfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2186" y="116"/>
+        </scene>
     </scenes>
     <resources>
         <image name="fundo" width="2060" height="2060"/>
         <image name="logo" width="315" height="317"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5Rr-NO-hK9"/>
+    </inferredMetricsTieBreakers>
 </document>
