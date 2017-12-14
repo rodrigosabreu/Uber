@@ -10,10 +10,49 @@ import UIKit
 import FirebaseAuth
 import MapKit
 
-class PassageiroViewController: UIViewController {
+class PassageiroViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet var mapa: MKMapView!
     
+    //localizacao do usuario
+    var gerenciadorLocalizacao = CLLocationManager()
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        gerenciadorLocalizacao.delegate = self
+        gerenciadorLocalizacao.desiredAccuracy = kCLLocationAccuracyBest
+        gerenciadorLocalizacao.requestWhenInUseAuthorization()
+        gerenciadorLocalizacao.startUpdatingLocation()
+        
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        //Recupera as coordenadas do local atual
+        if let coordenadas = manager.location?.coordinate{
+            let regiao = MKCoordinateRegionMakeWithDistance(coordenadas, 200, 200)
+            mapa.setRegion(regiao, animated: true)
+            
+            //Remove anotacoes antes de criar
+            mapa.removeAnnotations(mapa.annotations)
+            
+            //Cria anotacao para o local do usuario
+            let anotacaoUsuario = MKPointAnnotation()
+            anotacaoUsuario.coordinate = coordenadas
+            anotacaoUsuario.title = "Seu local"
+            mapa.addAnnotation( anotacaoUsuario )
+        }
+        
+        
+    }
+    
+   
     @IBAction func deslogarUsuario(_ sender: Any) {
         
         let autenticacao = Auth.auth()
@@ -27,30 +66,5 @@ class PassageiroViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
